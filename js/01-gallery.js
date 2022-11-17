@@ -33,12 +33,15 @@ const onContainerClick = e => {
     <img src="${source}"width="800" height="600">`);
 
   instance.show();
+  
+  document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    instance.close();
+  }
+  })
+  
 };
 
-window.addEventListener('keydown', function (event) {
-  if (event.key === 'Escape') {
-    instance.style.display = 'none'
-  }
-})
+
 
 galleryWindow.addEventListener('click', onContainerClick);
