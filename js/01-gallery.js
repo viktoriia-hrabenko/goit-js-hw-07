@@ -35,4 +35,10 @@ const onContainerClick = e => {
   instance.show();
 };
 
+window.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    instance.style.display = 'none'
+  }
+})
+
 galleryWindow.addEventListener('click', onContainerClick);
